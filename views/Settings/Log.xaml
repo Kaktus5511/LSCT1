@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="LeagueSharp.Loader.Views.Settings.Log" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+    <DataGrid x:ConnectionId="1" Name="LogsDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,30" ItemsSource="{Binding Logs.MainLog.Items}">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="{DynamicResource Status}" Binding="{Binding Status}" />
+        <DataGridTextColumn Header="{DynamicResource Source}" Binding="{Binding Source}" />
+        <DataGridTextColumn Header="{DynamicResource Content}" Width="*" Binding="{Binding Message}" />
+      </DataGrid.Columns>
+    </DataGrid>
+    <Button x:ConnectionId="2" Content="{DynamicResource OpenFolder}" HorizontalAlignment="Left" Width="95" Height="25" VerticalAlignment="Bottom" />
+  </Grid>
+</UserControl>
